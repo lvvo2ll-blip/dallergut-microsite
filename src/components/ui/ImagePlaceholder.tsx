@@ -20,7 +20,7 @@ export default function ImagePlaceholder({
   const [hasError, setHasError] = useState(false);
 
   // 사용자 업로드 예상 경로 (예: alt가 "구름1.png" 또는 "구름1" 이라면 "/구름1.png" 호출)
-  const srcPath = alt.endsWith('.png') ? `/${alt}` : `/${alt}.png`;
+  const srcPath = alt.endsWith('.png') ? `/dallergut-microsite/${alt}` : `/dallergut-microsite/${alt}.png`;
 
   useEffect(() => {
     // alt가 바뀔 때 에러 상태 초기화

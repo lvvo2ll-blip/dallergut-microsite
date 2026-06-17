@@ -8,7 +8,7 @@ export default function StoryPage() {
     <div
       className="flex-grow w-full min-h-[calc(100vh-89px)] relative overflow-hidden bg-[#031133] flex flex-col items-center justify-between p-8 md:p-16"
       style={{
-        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.45), rgba(3, 17, 51, 0.45)), url('/Story_배경.png')",
+        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.45), rgba(3, 17, 51, 0.45)), url('/dallergut-microsite/Story_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

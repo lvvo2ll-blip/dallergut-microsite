@@ -15,7 +15,7 @@ export default function DreamBoxPage() {
     <div
       className="flex-grow w-full min-h-[calc(100vh-89px)] relative overflow-hidden bg-[#031133] flex flex-col items-center justify-center p-6 md:p-12"
       style={{
-        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.35), rgba(3, 17, 51, 0.35)), url('/Dream Box 배경.png')",
+        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.35), rgba(3, 17, 51, 0.35)), url('/dallergut-microsite/Dream Box 배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

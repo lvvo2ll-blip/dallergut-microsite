@@ -9,7 +9,7 @@ export default function CharacterPage() {
     <div
       className="flex-grow w-full min-h-[calc(100vh-89px)] relative overflow-hidden bg-[#031133] flex flex-col justify-between p-6 md:p-12"
       style={{
-        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.45), rgba(3, 17, 51, 0.45)), url('/character_배경.png')",
+        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.45), rgba(3, 17, 51, 0.45)), url('/dallergut-microsite/character_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
