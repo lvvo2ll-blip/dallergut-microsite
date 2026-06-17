@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/dallergut-microsite//_next/:path+",
+        "destination": "/dallergut-microsite/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
