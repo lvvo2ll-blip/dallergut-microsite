@@ -96,7 +96,7 @@ function HomeSection() {
         <div className="relative w-full h-full flex items-end justify-center">
           <div className="absolute min-w-full min-h-full aspect-[1920/1080] shrink-0 bottom-0">
             <img
-              src="/dallergut-microsite/Home_배경.png"
+              src="/Home_배경.png"
               alt="백화점 건물"
               className="w-full h-full object-bottom select-none pointer-events-none"
             />
@@ -196,7 +196,7 @@ function HomeSection() {
           : 'opacity-0 pointer-events-none'
           }`}
         style={{
-          backgroundImage: "url('/dallergut-microsite/Dream Box 배경.png')",
+          backgroundImage: "url('/Dream Box 배경.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom center',
           backgroundRepeat: 'no-repeat',
@@ -354,7 +354,7 @@ function BookOverviewSection() {
       id="book-overview"
       className="w-full min-h-screen relative overflow-hidden bg-[#031133] flex flex-col items-center justify-center p-6 sm:p-12 md:p-16"
       style={{
-        backgroundImage: "url('/dallergut-microsite/Story_배경.png')",
+        backgroundImage: "url('/Story_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -444,7 +444,7 @@ function BookOverviewSection() {
             {/* [왼쪽 컬럼]: 펀딩 성과 요약 */}
             <div className="w-full">
               <div className="relative font-gowun flex flex-col gap-4 justify-center text-[#FAFAFA] h-full border-l border-white/20 pl-6">
-                <img src="/dallergut-microsite/별점.png" alt="별점" className="w-32 mb-4 object-contain" />
+                <img src="/별점.png" alt="별점" className="w-32 mb-4 object-contain" />
                 <h4 className="text-[27px] font-bold text-[#FFF8B9] leading-relaxed">
                   &ldquo;평점 4.8점, 베스트셀러<br />1위로 증명된 따뜻한 이야기&rdquo;
                 </h4>
@@ -526,7 +526,7 @@ function AuthorSection() {
       id="author"
       className="w-full min-h-screen relative bg-[#031133] flex flex-col items-center p-8 md:p-16 pt-32 pb-32"
       style={{
-        backgroundImage: "url('/dallergut-microsite/Author_배경.png')",
+        backgroundImage: "url('/Author_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -822,7 +822,7 @@ function StorySection() {
       id="story"
       className="w-full min-h-screen relative bg-[#031133] flex flex-col items-center justify-between p-8 md:p-16 pt-32 pb-32"
       style={{
-        backgroundImage: "url('/dallergut-microsite/Story_배경.png')",
+        backgroundImage: "url('/Story_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -856,7 +856,7 @@ function StorySection() {
           <div
             className="w-full max-w-[620px] aspect-[749/381] flex items-center justify-center px-12 sm:px-16 md:px-20 text-center select-text transition-all duration-300"
             style={{
-              backgroundImage: "url('/dallergut-microsite/구름.png')",
+              backgroundImage: "url('/구름.png')",
               backgroundSize: 'contain',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -967,7 +967,7 @@ function CharacterSection() {
       id="character"
       className="w-full min-h-screen relative overflow-hidden bg-[#031133] flex flex-col justify-between p-6 md:p-12 pt-32 pb-32"
       style={{
-        backgroundImage: "url('/dallergut-microsite/character_배경.png')",
+        backgroundImage: "url('/character_배경.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -1000,7 +1000,7 @@ function CharacterSection() {
             style={{ borderRadius: '200px 200px 0 0' }}
           >
             <img
-              src="/dallergut-microsite/페니.png"
+              src="/페니.png"
               alt="페니"
               className="object-cover w-full h-full"
               style={{ borderRadius: '194px 194px 0 0' }}
@@ -1031,7 +1031,7 @@ function CharacterSection() {
             style={{ borderRadius: '200px 200px 0 0' }}
           >
             <img
-              src="/dallergut-microsite/달러구트.png"
+              src="/달러구트.png"
               alt="달러구트"
               className="object-cover w-full h-full"
               style={{ borderRadius: '194px 194px 0 0' }}
