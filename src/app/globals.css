@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Gowun Batang', serif;
+    background-color: #031133;
+    color: #F5F5F5;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Glegoo 포인트 폰트 */
+.font-glegoo {
+  font-family: 'Glegoo', serif;
+}
+
+/* Gowun Batang 본문 폰트 */
+.font-gowun {
+  font-family: 'Gowun Batang', serif;
+}
+
+/* 0.5px x 0.5px 미세 노이즈 효과 레이어 */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.02;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: #FFFFFF;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  filter: brightness(1.1) contrast(1.25);
+}
+
+/* 구름 둥실둥실 애니메이션 (좌우 유기적 움직임 보강 - 15px 내외 제한) */
+@keyframes cloudMove1 {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(15px, -4px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes cloudMove2 {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(-15px, 4px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.animate-cloud-1 {
+  animation: cloudMove1 15s ease-in-out infinite;
+}
+
+.animate-cloud-2 {
+  animation: cloudMove2 26s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* 층별 별 손잡이 호버 광채 효과 */
+.glow-effect {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 250, 202, 0.6) 0%, rgba(255, 250, 202, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-effect:hover {
+  transform: scale(1.15);
+}
+
+.glow-effect:hover::after {
+  opacity: 1;
+}
+
+/* Dream Box 하얀색 이름표 텍(Tag) 등장 및 흔들림 애니메이션 */
+@keyframes fadeInTag {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotate(-15deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) var(--tw-rotate, rotate(-3deg));
+  }
+}
+
+.animate-tag-appear {
+  animation: fadeInTag 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 칼날처럼 선명한 텍스트 섀도우 효과 */
+.sharp-text {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 1px rgba(0, 0, 0, 0.9);
+}
+
+/* 스크롤바 숨기기 유틸리티 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

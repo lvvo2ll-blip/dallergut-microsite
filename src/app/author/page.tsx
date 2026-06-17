@@ -1,0 +1,63 @@
+'use client';
+
+import React from 'react';
+import ImagePlaceholder from '@/components/ui/ImagePlaceholder';
+
+export default function AuthorPage() {
+  return (
+    <div
+      className="flex-grow w-full min-h-[calc(100vh-89px)] relative overflow-hidden bg-[#031133] flex flex-col items-center justify-center p-8 md:p-16"
+      style={{
+        backgroundImage: "linear-gradient(rgba(3, 17, 51, 0.45), rgba(3, 17, 51, 0.45)), url('/Author_배경.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* 1. 중앙 타이틀 'Author' */}
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 text-center z-10">
+        <h1 className="font-glegoo text-[#FFF8B9] text-3xl md:text-4xl tracking-widest lowercase select-none">
+          Author
+        </h1>
+      </div>
+
+      {/* 2. 본문 2단 배치 영역 */}
+      <div className="w-full max-w-2xl flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 relative z-10 mt-16 md:mt-24">
+        
+        {/* [좌측 영역 - 작가 사진 플레이스홀더] */}
+        <div className="flex-shrink-0 relative group md:translate-x-8">
+          <div className="w-[242px] h-[330px] overflow-hidden bg-[#031133]/40 shadow-2xl transition-all duration-500 ease-out transform group-hover:scale-[1.03] rounded-2xl">
+            <ImagePlaceholder
+              alt="이미예 작가.png"
+              width="100%"
+              height="100%"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        {/* [우측 영역 - 작가 소개 텍스트] */}
+        <div className="flex flex-col gap-6 text-left max-w-md font-gowun border-l border-white/20 pl-6">
+          
+          {/* 작가 이름 */}
+          <div className="border-b border-[#FFF8B9]/25 pb-4">
+            <h2 className="text-[#FFF8B9] text-2xl md:text-3xl font-bold tracking-wide">
+              이미예 작가
+            </h2>
+            <span className="block text-xs text-[#F5F5F5]/50 tracking-widest font-glegoo mt-1">
+              Lee Mi Ye
+            </span>
+          </div>
+
+          {/* 작가 소개글 */}
+          <p className="text-sm md:text-base text-[#F5F5F5] leading-loose drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+            부산에서 태어나 재료공학을 전공하고 반도체 엔지니어로 일했던 경험을 바탕으로,
+            꿈과 위로를 소재로 한 《달러구트 꿈 백화점》으로 독자들의 사랑을 받은 소설가입니다.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  );
+}
