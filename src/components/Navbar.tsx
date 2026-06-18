@@ -114,10 +114,13 @@ export default function Navbar() {
     isMainPage && activeSection === sectionId;
 
   return (
-    <nav className="w-full flex items-center justify-between py-4 px-8 border-b border-[#FFF8B9]/15 bg-[#031133]/85 backdrop-blur-md fixed top-0 left-0 z-[99999]">
+    <nav 
+      className="w-full flex items-center justify-between py-4 px-8 border-b border-[#FFF8B9]/15 bg-[#031133]/85 backdrop-blur-md fixed top-0 left-0 z-[99999]"
+      style={{ transform: 'translate3d(0, 0, 0)', WebkitTransform: 'translate3d(0, 0, 0)' }}
+    >
 
       {/* 좌측 영역: 로고 */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 relative z-20">
         <a
           href="/"
           onClick={handleLogoClick}
@@ -165,7 +168,7 @@ export default function Navbar() {
       </div>
 
       {/* 우측 영역: 메뉴 (4개의 서사 메뉴만 배치) */}
-      <div className="ml-auto flex items-center gap-8 font-glegoo text-sm tracking-wide text-[#F5F5F5]">
+      <div className="ml-auto flex items-center gap-8 font-glegoo text-sm tracking-wide text-[#F5F5F5] relative z-20">
 
         {/* 스크롤 메뉴 4개 */}
         {SCROLL_ITEMS.map(({ label, sectionId }) => {

@@ -1226,14 +1226,11 @@ export default function HomePage() {
   useEffect(() => {
     if (isScrollLocked) {
       window.scrollTo(0, 0); // 스크롤 락 발동 전 윈도우 스크롤 위치를 y=0으로 강제 리셋
-      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
     } else {
-      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
     return () => {
-      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     };
   }, [isScrollLocked]);
