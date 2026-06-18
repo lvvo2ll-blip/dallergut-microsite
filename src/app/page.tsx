@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ImagePlaceholder from '@/components/ui/ImagePlaceholder';
 import { floorData } from '@/constants/floorData';
 import { characterData } from '@/constants/characterData';
@@ -1221,6 +1221,7 @@ function CharacterSection() {
 // ───────────────────────────────────────────────
 export default function HomePage() {
   const { isScrollLocked, setIsScrollLocked } = useTab();
+  const lastUnlockedTime = useRef<number>(0);
 
   // 1) 스크롤 격리 로직: isScrollLocked가 true이면 최상단 고정 (overflow: hidden)
   useEffect(() => {
@@ -1229,6 +1230,7 @@ export default function HomePage() {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+      lastUnlockedTime.current = Date.now();
     }
     return () => {
       document.body.style.overflow = '';
@@ -1239,6 +1241,10 @@ export default function HomePage() {
   useEffect(() => {
     const handleScroll = () => {
       if (!isScrollLocked && window.scrollY <= 5) {
+        // 잠금이 막 풀린 지 1초 이내라면 (스크롤 애니메이션 진행 중일 수 있음) 자동 재잠금을 방지
+        if (Date.now() - lastUnlockedTime.current < 1000) {
+          return;
+        }
         setIsScrollLocked(true);
       }
     };
